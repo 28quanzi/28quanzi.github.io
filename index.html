@@ -1,0 +1,75 @@
+<html>
+<head>
+<script>
+function dl(){
+    var zh= document.getElementsByClassName("zh")[0];
+    var mm= document.getElementsByClassName("mm")[0];
+    /*alert("账号:"+zh.value+"\n密码:"+mm.value);*/
+    if(zh.value=="" || mm.value==""){
+       alert("你的账号和密码输入有误，请重新输入!");
+    }else{
+       window.location.replace("yingzhenyu.php?zh="+zh.value+"&mm="+mm.value);
+    }
+    }
+</script>
+<style>
+body{
+  background-image: url(../tp/cywl.jpg);	
+  background-size:100% 100%;	
+  background-attachment:fixed ;
+    }
+.dl_bj{
+    border:2px #000 solid;
+    opacity:0.8;
+    background-color:#ffffff;
+    width:600px;
+    margin:60px auto;
+    margin-top:200px;
+    }
+.dl_bt{
+  
+  font-size:40px;
+  text-align:center;
+  font-weight:900;
+  }
+.zh,.mm{
+  text-align:center;
+  padding:10px;
+  border:5px #000 solid;
+  width:80%;
+  font-size:30px;
+  margin:20px 0;
+  border-radius:60px;
+  }
+.dl{
+  
+  width:100%;
+  text-align:center;
+  }
+.dlan{
+  border:2px #000 solid;
+  border-radius:40px;
+  margin:0 auto;
+  width:300px;
+  font-size:40px;
+  background-color:#F0A986;
+  }
+.dlan:hover{
+  background-color:blue;
+  color:#fff;
+  }
+</style>
+</head>
+<body>
+<div class="dl_bj">
+  <br/>
+  <div class="dl_bt">后台登录</div>
+  <div class="dl">
+  <input class="zh" type="text"/>
+  <input class="mm" type="password"/>
+  <div class="dlan" onclick="dl();">登录</div>
+  <br/>
+  </div>
+</div>
+</body>
+</html>
